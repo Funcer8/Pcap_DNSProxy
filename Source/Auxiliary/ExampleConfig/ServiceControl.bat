@@ -25,7 +25,7 @@ set Architecture=
 IF %PROCESSOR_ARCHITECTURE%%PROCESSOR_ARCHITEW6432% == x86 (
 	set Architecture=_x86
 )
-ver | findstr /L /I " 5." >nul
+ver | findstr /R "[ ]5\." >nul
 IF NOT ERRORLEVEL 1 (
 	set Architecture=_XP
 )
